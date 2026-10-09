@@ -22,14 +22,18 @@
     <article id="about" class="card">
       <span class="badge">New</span>
       <h2>About Me</h2>
-      <figure>
+      <div class="about-body">
+        <figure>
         <img src="images/R.webp" alt="Photo of [Rida]" width="180">
         <figcaption>That's my Name!</figcaption>
       </figure>
-        <p>I am Rida Hassan. I am student of BSCS at Qarshi University. i have interest in Cybersecurity. And i want to be a Cybersecurity Analyst. Learn more at <a href="https://developer.mozilla.org">MDN Web Docs</a>.</p>
-      <blockquote>
+        <div>
+          <p>I am Rida Hassan. I am student of BSCS at Qarshi University. i have interest in Cybersecurity. And i want to be a Cybersecurity Analyst. Learn more at <a href="https://developer.mozilla.org">MDN Web Docs</a>.</p>
+          <blockquote>
         <p>"The best way to learn is by building."</p>
       </blockquote>
+        </div>
+      </div>
     </article>
     <section id="skills" class="card">
       <h2>Skills I'm Building This Semester</h2>
@@ -67,52 +71,56 @@
       <form id="contact-form">
         <fieldset>
           <legend>Send me a message</legend>
-          <p>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required>
-          </p>
-          <p>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </p>
-          <p>
+
+          <div class="row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+
+          <div class="field">
             <label for="topic">Topic</label>
             <select id="topic" name="topic">
               <option value="general">General</option>
               <option value="feedback">Feedback</option>
               <option value="bug">Report a Bug</option>
             </select>
-          </p>
+          </div>
 
           <!-- 5.4 Radio group -->
           <p>Preferred reply method:</p>
-          <p>
+          <div class="radio-group">
             <label><input type="radio" name="reply" value="email" checked> Email</label>
             <label><input type="radio" name="reply" value="phone"> Phone</label>
-          </p>
+          </div>
 
           <!-- 5.5 Checkbox -->
-          <p>
+          <div class="field">
             <label><input type="checkbox" id="subscribe" name="subscribe"> Subscribe to updates</label>
-          </p>
+          </div>
 
           <!-- 5.6 Date -->
-          <p>
+          <div class="field">
             <label for="callback-date">Preferred callback date</label>
             <input type="date" id="callback-date" name="callback-date">
-          </p>
+          </div>
 
           <!-- 5.7 Range -->
-          <p>
+          <div class="field">
             <label for="urgency">Urgency (1 = whenever, 10 = right now)</label>
             <input type="range" id="urgency" name="urgency" min="1" max="10" value="5">
-          </p>
+          </div>
 
           <!-- 5.8 Textarea -->
-          <p>
+          <div class="field">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="4" required minlength="10"></textarea>
-          </p>
+          </div>
 
           <button type="submit">Send</button>
         </fieldset>
