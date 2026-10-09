@@ -10,7 +10,7 @@ CIT331 Lab 3. A responsive profile page styled with CSS3.
 - CSS variables, contrast-checked colors and visible keyboard focus
 
 ## Lighthouse accessibility score
-XX / 100  <!-- replace XX with your real score from Step 7.6 -->
+100 / 100 
 
 ## Screenshots
 ![Desktop view](screenshots/desktop.png)
