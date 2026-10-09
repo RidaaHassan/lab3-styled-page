@@ -123,6 +123,79 @@ textarea:focus {
 #timeline li:first-child {
   font-weight: 700;
 }
-#timeline li:last-child
-/* TEMPORARY - delete after experiment */
-.card { width: 100%; }
+#timeline li:last-child {
+  color: var(--accent);
+}
+
+/* ---------- Step 2.8 Pseudo-elements ---------- */
+h2::before {
+  content: "\00BB\00A0";
+  color: var(--accent);
+}
+blockquote::before {
+  content: "\201C";
+  font-size: 3rem;
+  line-height: 0;
+  vertical-align: -0.4em;
+  margin-right: 4px;
+  color: var(--accent);
+}
+a[href^="http"]::after {
+  content: " (external)";
+  font-size: 0.8em;
+  color: var(--muted);
+}
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* ================= TASK 3 ================= */
+
+/* ---------- Step 3.1 Center the page ---------- */
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px var(--space);
+}
+
+/* ---------- Step 3.5 Footer and buttons ---------- */
+footer {
+  background: var(--brand-dark);
+  color: #fff;
+  padding: 24px;
+  margin-top: 32px;
+}
+footer p {
+  margin: 0;
+}
+button {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(1.15);
+}
+
+/* ---------- Step 3.7 Media and display ---------- */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+figure {
+  margin: 0;
+}
+figcaption {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+.card img {
+  border-radius: var(--radius);
+}
