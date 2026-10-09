@@ -199,3 +199,4 @@ figcaption {
 .card img {
   border-radius: var(--radius);
 }
+.demo-wrap { display: flex; flex-direction: column; }
