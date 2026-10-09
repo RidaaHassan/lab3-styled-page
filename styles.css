@@ -77,7 +77,6 @@ nav a {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 24px;
-  margin-bottom: 24px;
   box-shadow: 0 2px 6px rgba(11, 31, 58, 0.08);
   position: relative;      /* Step 4.2 */
 }
@@ -168,6 +167,9 @@ main {
   padding: 24px var(--space);
   flex: 1;                 /* Step 5.5 */
   width: 100%;
+  display: grid;           /* Step 6.1 mobile-first: one column */
+  grid-template-columns: 1fr;
+  gap: 24px;
 }
 
 /* ---------- Step 3.5 Footer and buttons ---------- */
@@ -320,4 +322,36 @@ nav {
   display: flex;
   gap: 16px;
   margin-bottom: 16px;
+}
+
+/* ================= TASK 6 ================= */
+
+/* ---------- Step 6.3 Tablet: two columns ---------- */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "about about"
+      "skills timeline"
+      "media aside"
+      "contact contact";
+  }
+  #about    { grid-area: about; }
+  #skills   { grid-area: skills; }
+  #timeline { grid-area: timeline; }
+  #media    { grid-area: media; }
+  .fun-fact { grid-area: aside; }
+  #contact  { grid-area: contact; }
+}
+
+/* ---------- Step 6.4 Desktop: three columns ---------- */
+@media (min-width: 1100px) {
+  main {
+    max-width: 1200px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      "about about aside"
+      "skills timeline media"
+      "contact contact contact";
+  }
 }
