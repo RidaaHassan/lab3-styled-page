@@ -1,13 +1,17 @@
-# My Profile Page
+# My Styled Profile Page
 
-A semantic HTML5 profile page built for CIT331 Lab 2. Features a multi-field accessible contact form and a localStorage feature that remembers the visitor's name and topic between visits.
+CIT331 Lab 3. A responsive profile page styled with CSS3.
 
-## Author
-Rida Hassan, BSCS, Qarshi University
+## What this demonstrates
+- Selectors, specificity and the cascade
+- Box model cards, positioning (sticky header, badge, fixed button)
+- Flexbox for components and CSS Grid with named areas for the page layout
+- Mobile-first responsive design with two breakpoints
+- CSS variables, contrast-checked colors and visible keyboard focus
 
-## Files
-- `index.html` - the main page
-- `script.js` - localStorage code
-- `images/` - profile photo (`R.webp`)
-- `video/` - intro video (`video.webm`)
-- `.gitignore` - files Git should ignore
+## Lighthouse accessibility score
+XX / 100  <!-- replace XX with your real score from Step 7.6 -->
+
+## Screenshots
+![Desktop view](screenshots/desktop.png)
+![Mobile view](screenshots/mobile.png)
