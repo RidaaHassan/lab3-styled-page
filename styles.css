@@ -56,12 +56,18 @@ nav a {
   color: #fff;
   text-decoration: none;
   padding: 4px 8px;
+  display: inline-block;   /* Step 3.7 */
+  border-radius: 6px;
 }
 
 /* ---------- Step 2.3 Cards ---------- */
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 6px rgba(11, 31, 58, 0.08);
 }
 
 /* ---------- Step 2.4 ID selector ---------- */
@@ -117,33 +123,4 @@ textarea:focus {
 #timeline li:first-child {
   font-weight: 700;
 }
-#timeline li:last-child {
-  color: var(--accent);
-}
-
-/* ---------- Step 2.8 Pseudo-elements ---------- */
-h2::before {
-  content: "\00BB\00A0";
-  color: var(--accent);
-}
-blockquote::before {
-  content: "\201C";
-  font-size: 3rem;
-  line-height: 0;
-  vertical-align: -0.4em;
-  margin-right: 4px;
-  color: var(--accent);
-}
-a[href^="http"]::after {
-  content: " (external)";
-  font-size: 0.8em;
-  color: var(--muted);
-}
-::selection {
-  background: var(--brand);
-  color: #fff;
-}
-/* ---- TEMPORARY EXPERIMENT: delete after Step 2.10 ---- */
-p { color: red; }
-.card p { color: blue; }
-#about p { color: green; }
+#timeline li:last-child
