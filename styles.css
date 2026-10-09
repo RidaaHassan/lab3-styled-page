@@ -10,7 +10,7 @@ body {
 :root {
   --brand: #1e56d6;
   --brand-dark: #0b1f3a;
-  --accent: #0f9d78;
+  --accent: #0b7a5b;   /* darkened in Task 7 for 4.5:1 contrast */
   --bg: #f5f6f4;
   --surface: #ffffff;
   --text: #151a21;
@@ -353,5 +353,26 @@ nav {
       "about about aside"
       "skills timeline media"
       "contact contact contact";
+  }
+}
+
+
+/* ================= TASK 7 ================= */
+
+/* ---------- Step 7.3 Visible keyboard focus ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 3px;
+}
+.site-header a:focus-visible {
+  outline-color: #fff;
+}
+
+/* ---------- Step 7.4 Respect reduced motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button {
+    transition: none;
   }
 }
