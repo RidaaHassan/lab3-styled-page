@@ -124,3 +124,5 @@ textarea:focus {
   font-weight: 700;
 }
 #timeline li:last-child
+/* TEMPORARY - delete after experiment */
+.card { width: 100%; }
