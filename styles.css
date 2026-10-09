@@ -199,4 +199,8 @@ figcaption {
 .card img {
   border-radius: var(--radius);
 }
+
+/* ---------- TEMPORARY: Step 3.6 margin collapsing (delete after) ---------- */
+.demo-a { margin-bottom: 40px; }
+.demo-b { margin-top: 20px; }
 .demo-wrap { display: flex; flex-direction: column; }
