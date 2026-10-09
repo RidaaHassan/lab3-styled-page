@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +6,9 @@
   <title>Rida Hassan</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="top">
   <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header>
+  <header class="site-header">
     <h1>Rida Hassan</h1>
     <nav>
       <a href="#about">About</a>
@@ -19,7 +18,7 @@
     </nav>
   </header>
   <main id="main-content">
-    <article id="about">
+    <article id="about" class="card">
       <h2>About Me</h2>
       <figure>
         <img src="images/R.webp" alt="Photo of [Rida]" width="180">
@@ -30,9 +29,9 @@
         <p>"The best way to learn is by building."</p>
       </blockquote>
     </article>
-    <section id="skills">
+    <section id="skills" class="card">
       <h2>Skills I'm Building This Semester</h2>
-      <ul>
+      <ul class="tags">
         <li>HTML5 &amp; semantic markup</li>
         <li>CSS3 layout (Flexbox &amp; Grid)</li>
         <li>Git &amp; GitHub collaboration</li>
@@ -40,7 +39,7 @@
         <li>Coursera AI Professional Course</li>
       </ul>
     </section>
-    <section id="timeline">
+    <section id="timeline" class="card">
       <h2>My Timeline So Far</h2>
       <ol>
         <li>Completed Lab 1: set up my environment and pushed to GitHub</li>
@@ -48,11 +47,11 @@
         <li>Started this semantic HTML5 profile page</li>
       </ol>
     </section>
-    <aside>
+    <aside class="card fun-fact">
       <h2>Fun Fact</h2>
       <p>I started learning web development this semester, and my first webpage took me longer than I'd like to admit.</p>
     </aside>
-    <section id="media">
+    <section id="media" class="card">
       <h2>A Short Clip</h2>
       <video controls width="480">
   <source src="video/video.webm" type="video/webm">
@@ -61,7 +60,7 @@
 </video>
       <p><strong>Transcript summary:</strong> A 30-second Video Clip.</p>
     </section>
-    <section id="contact">
+    <section id="contact" class="card">
       <h2>Contact Me</h2>
       <form id="contact-form">
         <fieldset>
@@ -121,7 +120,8 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 Your Name. CIT331 Lab 2.</p>
+    <p>&copy; 2026 Rida Hassan</p>
+    <p>Built for CIT331</p>
   </footer>
   <script src="script.js"></script>
 </body>
