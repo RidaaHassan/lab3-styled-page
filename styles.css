@@ -27,6 +27,9 @@ body {
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
+  display: flex;           /* Step 5.5 sticky footer */
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* ================= TASK 2 ================= */
@@ -50,6 +53,11 @@ h2 {
   position: sticky;        /* Step 4.1 */
   top: 0;
   z-index: 100;            /* Step 4.3 */
+  display: flex;           /* Step 5.1 */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 .site-header h1 {
   color: #fff;
@@ -121,9 +129,6 @@ textarea:focus {
   outline: 3px solid var(--brand);
   outline-offset: 2px;
 }
-.tags li:nth-child(even) {
-  background: #e7f7f1;
-}
 #timeline li:first-child {
   font-weight: 700;
 }
@@ -161,6 +166,8 @@ main {
   max-width: 960px;
   margin: 0 auto;
   padding: 24px var(--space);
+  flex: 1;                 /* Step 5.5 */
+  width: 100%;
 }
 
 /* ---------- Step 3.5 Footer and buttons ---------- */
@@ -169,6 +176,11 @@ footer {
   color: #fff;
   padding: 24px;
   margin-top: 32px;
+  display: flex;           /* Step 5.5 */
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 footer p {
   margin: 0;
@@ -245,4 +257,67 @@ figcaption {
   border-radius: 999px;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= TASK 5 ================= */
+
+/* ---------- Step 5.1 Navigation ---------- */
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+/* ---------- Step 5.2 Tag chips ---------- */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tags li {
+  background: #eaf0fe;
+  color: var(--brand-dark);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+.tags li:nth-child(even) {
+  background: #e7f7f1;
+}
+
+/* ---------- Step 5.3 About layout ---------- */
+.about-body {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.about-body figure {
+  flex: 0 0 180px;
+}
+.about-body > div {
+  flex: 1 1 280px;
+}
+
+/* ---------- Step 5.4 Form layout ---------- */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+.row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.row .field {
+  flex: 1 1 220px;
+}
+.radio-group {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
 }
